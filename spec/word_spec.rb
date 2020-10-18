@@ -26,7 +26,7 @@ describe '#Word' do
     it("is the same word if it has the same attributes as another word") do
       word = Word.new("Dogs", nil)
       word2 = Word.new("Dogs", nil)
-      expect(word).to(eqq(word2))
+      expect(word).to(eq(word2))
     end
   end
 end

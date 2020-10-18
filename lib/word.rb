@@ -4,7 +4,7 @@ class Word
   @@words = {}
   @@total_rows = 0
 
-  def initialize(name)
+  def initialize(name, id)
     @name = name
     @id = id || @@total_rows += 1
   end
@@ -15,6 +15,11 @@ class Word
 
   def save
     @@words[self.id] = Word.new(self.name, self.id)
+  end
+
+  def ==(word_to_compare)
+    self.name() == word_to_compare.name()
+  end
 
   def self.find(name)
   end
