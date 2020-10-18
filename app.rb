@@ -15,29 +15,49 @@ get('/words') do
 end
 
 get('/words/new') do
-  "This route will take us to a page with a form for adding new words."
+  erb(:new_word)
 end
 
 get('/words/:id') do
-  "Route will show specific word based on ID. Value of ID here is #{params[:id]}"
+  @word = Word.find(params[:id].to_i())
+  erb(:word)
 end
 
 post ('/words') do
-  "This route will add a word to our list of words."
+  name = params[:word_name]
+  word = Word.new(name, nil)
+  word.save()
+  @words = Word.all()
+  erb(:words)
 end
 
 get('/words/:id/edit') do
-  "This will take us to a page with a form for updating words with an ID of #{params[:id]}"
+  @word = Word.find(params[:id].to_i())
+  erb(:edit_word)
 end
 
 patch('/words/:id') do
-  "This route will update a word."
+  @word = Word.find(params[:id].to_i())
+  @word.update(params[:name])
+  @words = Word.all
+  erb(:words)
 end
 
 delete('/words/:id') do
-  "This route will delete a word."
+  @word = Word.find(params[:id].to_i())
+  @word.delete()
+  @words = Word.all
+  erb(:words)
 end
 
 get('/custom_route') do
   "Create custom routes."
+end
+
+post('/words') do
+  name = params[:word_name]
+  word = Word.new(name, nil)
+  word.save()
+  @words = Words.all()
+  erb(:words)
 end
