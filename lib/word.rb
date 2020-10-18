@@ -21,7 +21,17 @@ class Word
     self.name() == word_to_compare.name()
   end
 
-  def self.find(name)
+  def self.clear
+    @@words = {}
+    @@total_rows = 0
+  end
+
+  def self.find(id)
+    @@words[id]
+  end
+
+  def update(name)
+    @name = name
   end
 
 end
