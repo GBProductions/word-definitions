@@ -3,7 +3,7 @@ require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 
 get('/') do
-  "This is home page."
+  "This is a home page."
 end
 
 get('/words') do
