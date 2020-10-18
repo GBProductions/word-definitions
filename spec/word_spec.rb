@@ -1,3 +1,14 @@
-require('spec_helper')
+require('rspec')
+require('word')
 
-describe('#Words') do
+describe '#Word' do
+
+# before(:each) do
+#   Word.clear()
+# end
+  describe(".all") do
+    it("returns empty array when there are no words.") do
+      expect(Word.all()).to(eq([]))
+    end
+  end
+end
