@@ -1,14 +1,20 @@
 class Word
-  @@words= []
-  # attr_accessor :name
+  attr_reader :id, :name
+
+  @@words = {}
+  @@total_rows = 0
 
   def initialize(name)
     @name = name
+    @id = id || @@total_rows += 1
   end
 
   def self.all()
-    @@words
+    @@words.values()
   end
+
+  def save
+    @@words[self.id] = Word.new(self.name, self.id)
 
   def self.find(name)
   end
