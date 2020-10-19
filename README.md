@@ -1,37 +1,39 @@
-# _{Application Name}_
+# _Word Definitions_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _{Brief description of application}, October 18h 2020_
 
-#### By _**{List of contributors}**_
+#### By _**Garrett Brown**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_You can make a dictionary with words you want to learn, and add definitions._
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* _Make sure you have the latest version of your favorite browser._
+* _Clone the "word-definitions" repository from Github to your computer by typing "git clone https://github.com/GBProductions/word-definitions.git" into the command line._
+* _Navigate to the root directory of the project in the terminal and type 'code .' to view project in an editor like VS Code._
+* _Run "gem install bundler" in command line to install bundler._
+* _Run "bundle install"._
+* _To run program, type "ruby app.rb" into Terminal._
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_Currently, definitions do not print to the words._
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_If you need assistance, please contact Garrett Brown at <garrettpualbrown@gmail.com>_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_Tools utilized for project:_
 
+* Ruby
+* VS Code
+* Ruby Gems Rspec, Pry, Sinatra, Sinatra-Contrib.
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*Available under an MIT License*
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2020 **_Garrett Brown_**
