@@ -20,24 +20,25 @@ class Definition
   end
 
   def save
-    @@definitions[self.id] = Word.new(self.name, self.id)
-  end
-
-  def self.clear
-    @@words = {}
-    @@total_rows = 0
+    @@definitions[self.id] = Definition.new(self.name, self.word_id, self.id)
   end
 
   def self.find(id)
-    @@words[id]
+    @@definitions[id]
   end
 
-  def update(name)
-    @name = name
+  def update(name, word_id)
+    self.name = name
+    self.word_id = word_id
+    @@definitions[self.id] = Definition.new(self.name, self.word_id, self.id)
   end
 
   def delete
-    @@words.delete(self.id)
+    @@definitions.delete(self.id)
+  end
+
+  def self.clear
+    @@definitions = {}
   end
 end
 
