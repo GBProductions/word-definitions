@@ -16,6 +16,7 @@ _You can make a dictionary with words you want to learn, and add definitions._
 * _Run "gem install bundler" in command line to install bundler._
 * _Run "bundle install"._
 * _To run program, type "ruby app.rb" into Terminal._
+* _To run via Heroku, put https://safe-oasis-36356.herokuapp.com/ into your browser.
 
 ## Known Bugs
 
@@ -32,6 +33,7 @@ _Tools utilized for project:_
 * Ruby
 * VS Code
 * Ruby Gems Rspec, Pry, Sinatra, Sinatra-Contrib.
+* Utilized Ruby instructions from learnhowtoprogram.com
 ### License
 
 *Available under an MIT License*
