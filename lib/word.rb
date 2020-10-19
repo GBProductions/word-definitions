@@ -37,5 +37,9 @@ class Word
   def delete
     @@words.delete(self.id)
   end
+
+  def definitions
+    Song.find_by_word(self.id)
+  end
 end
 

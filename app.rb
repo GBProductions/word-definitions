@@ -1,6 +1,7 @@
 require('sinatra')
 require('sinatra/reloader')
 require('./lib/word')
+require('./lib/definition')
 require('pry')
 also_reload('lib/**/*.rb')
 
@@ -60,4 +61,30 @@ post('/words') do
   word.save()
   @words = Words.all()
   erb(:words)
+end
+
+get('/words/:id/defintions/:definition_id') do
+  @definition = Definition.find(params[:song_id].to_i())
+  erb(:definition)
+end
+
+post('/words/:id/defintions') do
+  @word = Word.find(params[:id].to_i())
+  definition = Definition.new(params[:definition], @word_id, nil)
+  definition.save()
+  erb(:word)
+end
+
+patch('/words/:id/defintions/:definition_id') do
+  @word = Word.find(params[:id].to_i())
+  definition = Definition.find(params[:definition_id].to_i())
+  song.update(params[:name], @word.id)
+  erb(:word)
+end
+
+delete('/words/:id/defintions/:definition_id') do
+  definition = Definition.find(params[:definition_id].to_i())
+  definition.delete
+  @word = Word.find(params[:id].to_i())
+  erb(:album)
 end
