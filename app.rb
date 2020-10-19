@@ -64,7 +64,7 @@ post('/words') do
 end
 
 get('/words/:id/definitions/:definition_id') do
-  @definition = Definition.find(params[:song_id].to_i())
+  @definition = Definition.find(params[:definition_id].to_i())
   erb(:definition)
 end
 
@@ -78,7 +78,7 @@ end
 patch('/words/:id/definitions/:definition_id') do
   @word = Word.find(params[:id].to_i())
   definition = Definition.find(params[:definition_id].to_i())
-  song.update(params[:name], @word.id)
+  definition.update(params[:name], @word.id)
   erb(:word)
 end
 
@@ -86,5 +86,5 @@ delete('/words/:id/definitions/:definition_id') do
   definition = Definition.find(params[:definition_id].to_i())
   definition.delete
   @word = Word.find(params[:id].to_i())
-  erb(:album)
+  erb(:word)
 end
