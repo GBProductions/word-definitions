@@ -76,9 +76,9 @@ describe '#Word' do
     describe('#definitions') do
       word = Word.new("Cats", nil) do
       word.save()
-      definition = Song.new("Dogs", word_id, nil)
+      definition = Definition.new("Dogs", word_id, nil)
       definition.save()
-      definition2 = Song.new("Cats", word_id, nil)
+      definition2 = Definition.new("Cats", word_id, nil)
       definition2.save()
       expect(word.definitions).to(eq([definition, definition2]))
     end
