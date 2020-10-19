@@ -1,6 +1,6 @@
 # _Word Definitions_
 
-#### _{Brief description of application}, October 18h 2020_
+#### _{Brief description of application}, October 19th 2020_
 
 #### By _**Garrett Brown**_
 
@@ -20,7 +20,7 @@ _You can make a dictionary with words you want to learn, and add definitions._
 
 ## Known Bugs
 
-_Currently, definitions do not print to the words._
+_Currently no known bugs._
 
 ## Support and contact details
 
